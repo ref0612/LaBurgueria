@@ -110,23 +110,27 @@ body::after {
 /* ===== LOGO ===== */
 .logo-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    padding: 10px 0;
 }
 
 .logo-img {
-    width: 50px;
-    height: 50px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     border-radius: 50%;
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    padding: 5px;
 }
 
 .logo-img:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 /* ===== HEADER ===== */
 header {
@@ -914,18 +918,12 @@ main {
 }
 @media (max-width: 480px) {
     .logo-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
+        padding: 5px 0;
     }
     
     .logo-img {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .logo h1 {
-        font-size: 1.8rem;
+        width: 100px;
+        height: 100px;
     }
     
     .item-header {
