@@ -836,7 +836,7 @@ main {
 /* Badges para elementos destacados */
 .item-badge {
     position: absolute;
-    top: 15px;
+    top: 155px;
     right: 15px;
     background: linear-gradient(135deg, var(--accent-color), var(--warm-orange));
     color: white;

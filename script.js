@@ -192,7 +192,8 @@ document.addEventListener('DOMContentLoaded', function() {
     menuCategories.forEach(category => {
         observer.observe(category);
     });
-    // Funcionalidad del modal de imágenes
+    // Funcionalidad del modal de imágenes - Temporalmente deshabilitada
+    /*
     document.querySelectorAll('.menu-item').forEach(item => {
         item.addEventListener('click', function(e) {
             // Evitar que el clic se propague si se hace en un enlace o botón
@@ -211,6 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    */
     // Cerrar modal
     function closeImageModal() {
         modal.classList.remove('active');
