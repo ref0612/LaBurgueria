@@ -160,7 +160,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const defaultCategoryElement = document.getElementById(defaultCategory);
     
     if (defaultCategoryElement) {
-        showCategory(defaultCategory);
+        // Solo mostrar la categoría sin hacer scroll automático en móviles
+        if (window.innerWidth > 768) {
+            showCategory(defaultCategory);
+        } else {
+            // En móviles, solo mostrar la categoría sin hacer scroll
+            menuCategories.forEach(cat => {
+                if (cat.id === defaultCategory) {
+                    cat.style.display = 'block';
+                    cat.classList.add('active');
+                } else {
+                    cat.style.display = 'none';
+                    cat.classList.remove('active');
+                }
+            });
+        }
         
         // Marcar el botón de la categoría activa
         const activeButton = document.querySelector(`.nav-button[data-category="${defaultCategory}"]`);
