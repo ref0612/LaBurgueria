@@ -14,19 +14,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para alternar el menú móvil
     function toggleMenu() {
         const isOpening = !menuNav.classList.contains('active');
-        menuButton.classList.toggle('active');
-        menuNav.classList.toggle('active');
-        overlay.classList.toggle('active');
         
         if (isOpening) {
-            document.body.classList.add('menu-open');
-            document.body.style.overflow = 'hidden';
+            // Abrir menú
+            menuButton.classList.add('active');
+            menuNav.classList.add('active');
             overlay.style.display = 'block';
-            setTimeout(() => overlay.classList.add('active'), 10);
+            setTimeout(() => {
+                overlay.classList.add('active');
+                document.body.classList.add('menu-open');
+                document.body.style.overflow = 'hidden';
+            }, 10);
         } else {
+            // Cerrar menú
+            menuButton.classList.remove('active');
+            menuNav.classList.remove('active');
+            overlay.classList.remove('active');
             document.body.classList.remove('menu-open');
             document.body.style.overflow = '';
-            overlay.classList.remove('active');
+            
             setTimeout(() => {
                 if (!menuNav.classList.contains('active')) {
                     overlay.style.display = 'none';
