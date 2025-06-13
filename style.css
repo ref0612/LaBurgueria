@@ -74,10 +74,11 @@ body::after {
 .floating-icon {
     position: absolute;
     font-size: 2rem;
-    opacity: 0.05;
-    animation: float var(--duration) infinite linear;
-    animation-delay: var(--delay);
+    opacity: 0.08;
     color: var(--primary-color);
+    animation: float 15s infinite linear;
+    animation-delay: var(--delay, 0s);
+    animation-duration: var(--duration, 15s);
 }
 @keyframes float {
     0% {
@@ -85,10 +86,10 @@ body::after {
         opacity: 0;
     }
     10% {
-        opacity: 0.05;
+        opacity: 0.08;
     }
     90% {
-        opacity: 0.05;
+        opacity: 0.08;
     }
     100% {
         transform: translateY(-100px) rotate(360deg);
@@ -96,8 +97,12 @@ body::after {
     }
 }
 /* Posicionamiento aleatorio de iconos */
-.floating-icon:nth-child(1) { left: 10%; }
-.floating-icon:nth-child(2) { left: 20%; }
+.floating-icon:nth-child(1) { left: 10%; --delay: 0s; --duration: 15s; }
+.floating-icon:nth-child(2) { left: 20%; --delay: 2s; --duration: 18s; }
+.floating-icon:nth-child(3) { left: 30%; --delay: 4s; --duration: 20s; }
+.floating-icon:nth-child(4) { left: 40%; --delay: 6s; --duration: 16s; }
+.floating-icon:nth-child(5) { left: 50%; --delay: 8s; --duration: 19s; }
+.floating-icon:nth-child(6) { left: 60%; --delay: 10s; --duration: 17s; }
 .floating-icon:nth-child(3) { left: 70%; }
 .floating-icon:nth-child(4) { left: 80%; }
 .floating-icon:nth-child(5) { left: 40%; }
