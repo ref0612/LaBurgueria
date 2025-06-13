@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - LA BURGUERÍA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&family=Fredoka+One&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Fondo temático animado -->
+    <div class="background-elements">
+        <div class="floating-icon" style="--delay: 0s; --duration: 15s;">🍔</div>
+        <div class="floating-icon" style="--delay: 2s; --duration: 18s;">🍟</div>
+        <div class="floating-icon" style="--delay: 4s; --duration: 20s;">🌭</div>
+        <div class="floating-icon" style="--delay: 6s; --duration: 16s;">🥓</div>
+        <div class="floating-icon" style="--delay: 8s; --duration: 19s;">🧀</div>
+        <div class="floating-icon" style="--delay: 10s; --duration: 17s;">🍖</div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <h1>LA BURGUERÍA</h1>
+            <h2>La casa de la hamburguesa</h2>
+            <div class="logo-accent">
+                <i class="fas fa-fire"></i>
+                <span>Sabores Inigualables</span>
+                <i class="fas fa-fire"></i>
+            </div>
+        </div>
+        <div class="contact-info">
+            <span>Contáctanos</span>
+            <a href="https://wa.me/573133793029" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="social-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/laburgueriatunja1?igsh=N3JiazA4ZWIzajV3" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram" class="social-btn instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <button id="mobile-menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div id="overlay"></div>
+
+    <nav id="menu-nav">
+        <button class="nav-button" data-category="combos">
+            <i class="fas fa-fire"></i>
+            <span>Combos</span>
+        </button>
+        <button class="nav-button active" data-category="hamburguesas">
+            <i class="fas fa-hamburger"></i>
+            <span>Hamburguesas</span>
+        </button>
+        <button class="nav-button" data-category="perros">
+            <i class="fas fa-hotdog"></i>
+            <span>Perros Calientes</span>
+        </button>
+        <button class="nav-button" data-category="choriperros">
+            <i class="fas fa-sausage"></i>
+            <span>Choriperros</span>
+        </button>
+        <button class="nav-button" data-category="mazorcadas">
+            <i class="fas fa-corn"></i>
+            <span>Mazorcadas</span>
+        </button>
+        <button class="nav-button" data-category="papas">
+            <i class="fas fa-french-fries"></i>
+            <span>Papas Locas</span>
+        </button>
+        <button class="nav-button" data-category="arepas">
+            <i class="fas fa-bread-slice"></i>
+            <span>Arepas</span>
+        </button>
+        <button class="nav-button" data-category="costillas">
+            <i class="fas fa-drumstick-bite"></i>
+            <span>Costillas BBQ</span>
+        </button>
+        <button class="nav-button" data-category="bebidas">
+            <i class="fas fa-glass-water"></i>
+            <span>Bebidas</span>
+        </button>
+    </nav>
+
+    <main id="menu-container">
+        <!-- COMBOS -->
+        <section id="combos" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-fire"></i> COMBOS ESPECIALES</h2>
+                <p class="category-subtitle">¡Ofertas increíbles para disfrutar más!</p>
+            </div>
+            
+            <div class="menu-item featured promo-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Combo+Individual">
+                <div class="item-header">
+                    <h3>COMBO INDIVIDUAL</h3>
+                    <span class="price promo-price">$8.000</span>
+                </div>
+                <p class="ingredients">1 hamburguesa, papas, bebida en vaso 7 onz.</p>
+                <div class="item-tags">
+                    <span class="tag promo-tag">¡COMPLETO!</span>
+                </div>
+            </div>
+
+            <div class="menu-item special promo-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=2+Hamburguesas">
+                <div class="item-header">
+                    <h3>2 HAMBURGUESAS ESPECIALES</h3>
+                    <span class="price promo-price">$13.000</span>
+                </div>
+                <p class="ingredients">Dos hamburguesas especiales con todos los ingredientes.</p>
+                <div class="item-tags">
+                    <span class="tag promo-tag">¡AHORRA!</span>
+                </div>
+            </div>
+
+            <div class="menu-item special promo-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=2+Perros">
+                <div class="item-header">
+                    <h3>2 PERROS TRADICIONALES</h3>
+                    <span class="price promo-price">$13.000</span>
+                </div>
+                <p class="ingredients">Dos perros calientes tradicionales con salchicha americana.</p>
+                <div class="item-tags">
+                    <span class="tag promo-tag">¡SÚPER PRECIO!</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium promo-item destacado" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Combo+Pareja">
+                <div class="item-header">
+                    <h3>COMBO PAREJA</h3>
+                    <span class="price promo-price">$27.000</span>
+                </div>
+                <p class="ingredients">2 hamburguesas, 2 papas, 2 bebidas 250ml.</p>
+                <div class="item-tags">
+                    <span class="tag promo-tag">¡PARA COMPARTIR!</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- HAMBURGUESAS -->
+        <section id="hamburguesas" class="menu-category active">
+            <div class="category-header">
+                <h2><i class="fas fa-hamburger"></i> HAMBURGUESAS</h2>
+                <p class="category-subtitle">Pan fresco, carne 100% de res y los mejores ingredientes</p>
+            </div>
+            
+            <div class="menu-item featured" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Clasica">
+                <div class="item-badge">Popular</div>
+                <div class="item-header">
+                    <h3>CLÁSICA</h3>
+                    <span class="price">$10.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, 125gr carne 100% res, tomates, cebolla, lechuga, queso, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Clásica</span>
+                    <span class="tag">125gr</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Coqueta">
+                <div class="item-header">
+                    <h3>COQUETA</h3>
+                    <span class="price">$14.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, 125gr de carne 100% res, tomates, cebolla, lechuga, queso doble crema, queso cheddar, maíz, tocineta, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Maíz</span>
+                    <span class="tag">Doble Queso</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Burger+Pollo">
+                <div class="item-header">
+                    <h3>BURGER POLLO</h3>
+                    <span class="price">$16.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, pollo, tomate, cebolla, lechuga, queso, tocineta, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Pollo</span>
+                    <span class="tag">Saludable</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Hawaiana">
+                <div class="item-badge special-badge">Con Piña</div>
+                <div class="item-header">
+                    <h3>HAWAIANA</h3>
+                    <span class="price">$17.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, 200gr de carne 100% res, tomate, cebolla, lechuga, queso doble crema, piña en trozos, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">200gr</span>
+                    <span class="tag">Con Piña</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=La+Costeña">
+                <div class="item-header">
+                    <h3>LA COSTEÑA</h3>
+                    <span class="price">$17.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, doble carne de 125gr 100% res, tomate, cebolla, lechuga, huevo, queso doble crema, queso cheddar, tocineta, maíz.</p>
+                <div class="item-tags">
+                    <span class="tag">Doble Carne</span>
+                    <span class="tag">Con Huevo</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Burger+Queen">
+                <div class="item-header">
+                    <h3>BURGER QUEEN</h3>
+                    <span class="price">$17.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, 200gr de carne 100% res, tomate, cebolla, lechuga, jamón, queso, tocineta, queso costeño, queso doble crema, patacón, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Patacón</span>
+                    <span class="tag">Triple Queso</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Duo+Burger">
+                <div class="item-header">
+                    <h3>DUO BURGER</h3>
+                    <span class="price">$17.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, 125gr de carne 100% res, 125gr de cerdo o pollo, tomate, cebolla, lechuga, queso doble crema, tocineta, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Mixta</span>
+                    <span class="tag">Dos Carnes</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=La+Mexicana">
+                <div class="item-header">
+                    <h3>LA MEXICANA</h3>
+                    <span class="price">$17.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, 200gr de carne 100% res, tomate, cebolla, lechuga, queso doble crema, tocineta, jalapeño, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Picante</span>
+                    <span class="tag">200gr</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Burger+Egg">
+                <div class="item-header">
+                    <h3>BURGER EGG</h3>
+                    <span class="price">$17.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, 200gr de carne 100% res, tomate, cebolla, lechuga, queso doble crema, tocineta, 2 huevos fritos, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Huevos</span>
+                    <span class="tag">200gr</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Triple+Burger">
+                <div class="item-badge premium-badge">Premium</div>
+                <div class="item-header">
+                    <h3>TRIPLE BURGER</h3>
+                    <span class="price">$20.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, triple carne de 125gr 100% res, tomate, cebolla, lechuga, queso doble crema, tocineta, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Triple Carne</span>
+                    <span class="tag">375gr</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium destacado" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=La+Burgueria">
+                <div class="item-badge premium-badge">Especial</div>
+                <div class="item-header">
+                    <h3>LA BURGUERÍA</h3>
+                    <span class="price">$22.000</span>
+                </div>
+                <p class="ingredients">Pan fresco artesanal, 250gr de carne 100% res premium, tomate gourmet, cebolla caramelizada, lechuga, mezcla de quesos especiales, tocineta ahumada, patacón, salsas especiales de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Nuestra Especialidad</span>
+                    <span class="tag">250gr Premium</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERROS CALIENTES -->
+        <section id="perros" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-hotdog"></i> PERROS CALIENTES</h2>
+                <p class="category-subtitle">Salchicha americana de calidad con los mejores acompañamientos</p>
+            </div>
+            
+            <div class="menu-item featured" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Perro+Tradicional">
+                <div class="item-badge">Clásico</div>
+                <div class="item-header">
+                    <h3>PERRO TRADICIONAL</h3>
+                    <span class="price">$8.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, salchicha americana, ripio, queso costeño, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Tradicional</span>
+                    <span class="tag">Económico</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Perro+Especial">
+                <div class="item-header">
+                    <h3>PERRO ESPECIAL</h3>
+                    <span class="price">$10.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, salchicha americana, ripio, queso costeño, huevo de codorniz, papitas, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Huevo</span>
+                    <span class="tag">Con Papitas</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Perro+Hawaiano">
+                <div class="item-header">
+                    <h3>PERRO HAWAIANO</h3>
+                    <span class="price">$12.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, salchicha americana, ripio, queso costeño, piña en trozos, jamón, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Piña</span>
+                    <span class="tag">Tropical</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Perro+Gratinado">
+                <div class="item-header">
+                    <h3>PERRO GRATINADO</h3>
+                    <span class="price">$13.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, salchicha americana, ripio, queso costeño, queso mozzarella gratinado, tocineta, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Gratinado</span>
+                    <span class="tag">Doble Queso</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Super+Perro">
+                <div class="item-badge premium-badge">Premium</div>
+                <div class="item-header">
+                    <h3>SÚPER PERRO</h3>
+                    <span class="price">$15.000</span>
+                </div>
+                <p class="ingredients">Pan fresco artesanal, salchicha premium, ripio, mezcla de quesos, huevo frito, tocineta, papitas, patacón, salsas especiales.</p>
+                <div class="item-tags">
+                    <span class="tag">Premium</span>
+                    <span class="tag">Completo</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHORIPERROS -->
+        <section id="choriperros" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-sausage"></i> CHORIPERROS</h2>
+                <p class="category-subtitle">El sabor auténtico del chorizo con nuestro toque especial</p>
+            </div>
+            
+            <div class="menu-item featured" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Choriperro+Tradicional">
+                <div class="item-header">
+                    <h3>CHORIPERRO TRADICIONAL</h3>
+                    <span class="price">$10.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, chorizo artesanal, arepa, queso costeño, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Artesanal</span>
+                    <span class="tag">Con Arepa</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Choriperro+Especial">
+                <div class="item-header">
+                    <h3>CHORIPERRO ESPECIAL</h3>
+                    <span class="price">$13.000</span>
+                </div>
+                <p class="ingredients">Pan fresco, chorizo artesanal, arepa, queso costeño, huevo frito, papitas, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Huevo</span>
+                    <span class="tag">Especial</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Choriperro+Premium">
+                <div class="item-badge premium-badge">Premium</div>
+                <div class="item-header">
+                    <h3>CHORIPERRO PREMIUM</h3>
+                    <span class="price">$16.000</span>
+                </div>
+                <p class="ingredients">Pan artesanal, chorizo premium, arepa, mezcla de quesos, huevo frito, tocineta, patacón, salsas especiales.</p>
+                <div class="item-tags">
+                    <span class="tag">Premium</span>
+                    <span class="tag">Completo</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAZORCADAS -->
+        <section id="mazorcadas" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-corn"></i> MAZORCADAS</h2>
+                <p class="category-subtitle">Maíz tierno con deliciosos acompañamientos</p>
+            </div>
+            
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Mazorcada+Tradicional">
+                <div class="item-header">
+                    <h3>MAZORCADA TRADICIONAL</h3>
+                    <span class="price">$8.000</span>
+                </div>
+                <p class="ingredients">Maíz tierno, queso costeño, mantequilla, sal.</p>
+                <div class="item-tags">
+                    <span class="tag">Clásica</span>
+                    <span class="tag">Vegetariana</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Mazorcada+Gratinada">
+                <div class="item-header">
+                    <h3>MAZORCADA GRATINADA</h3>
+                    <span class="price">$10.000</span>
+                </div>
+                <p class="ingredients">Maíz tierno, queso costeño, queso mozzarella gratinado, mantequilla, salsas.</p>
+                <div class="item-tags">
+                    <span class="tag">Gratinada</span>
+                    <span class="tag">Doble Queso</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Mazorcada+Premium">
+                <div class="item-header">
+                    <h3>MAZORCADA PREMIUM</h3>
+                    <span class="price">$12.000</span>
+                </div>
+                <p class="ingredients">Maíz tierno, mezcla de quesos, tocineta, mantequilla de ajo, salsas especiales.</p>
+                <div class="item-tags">
+                    <span class="tag">Premium</span>
+                    <span class="tag">Con Tocineta</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAPAS LOCAS -->
+        <section id="papas" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-french-fries"></i> PAPAS LOCAS</h2>
+                <p class="category-subtitle">Papas crujientes con increíbles combinaciones</p>
+            </div>
+            
+            <div class="menu-item featured" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Papas+Tradicionales">
+                <div class="item-header">
+                    <h3>PAPAS TRADICIONALES</h3>
+                    <span class="price">$6.000</span>
+                </div>
+                <p class="ingredients">Papas crujientes, queso costeño, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Clásicas</span>
+                    <span class="tag">Crujientes</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Papas+Especiales">
+                <div class="item-header">
+                    <h3>PAPAS ESPECIALES</h3>
+                    <span class="price">$8.000</span>
+                </div>
+                <p class="ingredients">Papas crujientes, queso costeño, maíz, ripio, salsas de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Maíz</span>
+                    <span class="tag">Especiales</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Papas+Gratinadas">
+                <div class="item-header">
+                    <h3>PAPAS GRATINADAS</h3>
+                    <span class="price">$10.000</span>
+                </div>
+                <p class="ingredients">Papas crujientes, queso costeño, queso mozzarella gratinado, tocineta, salsas.</p>
+                <div class="item-tags">
+                    <span class="tag">Gratinadas</span>
+                    <span class="tag">Con Tocineta</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Papas+Premium">
+                <div class="item-badge premium-badge">Premium</div>
+                <div class="item-header">
+                    <h3>PAPAS PREMIUM LOCAS</h3>
+                    <span class="price">$13.000</span>
+                </div>
+                <p class="ingredients">Papas artesanales, mezcla de quesos premium, carne desmechada, huevo frito, tocineta, maíz, salsas especiales.</p>
+                <div class="item-tags">
+                    <span class="tag">Premium</span>
+                    <span class="tag">Con Carne</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- AREPAS -->
+        <section id="arepas" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-bread-slice"></i> AREPAS</h2>
+                <p class="category-subtitle">Arepas artesanales con rellenos deliciosos</p>
+            </div>
+            
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Arepa+Sencilla">
+                <div class="item-header">
+                    <h3>AREPA SENCILLA</h3>
+                    <span class="price">$4.000</span>
+                </div>
+                <p class="ingredients">Arepa artesanal, queso costeño, mantequilla.</p>
+                <div class="item-tags">
+                    <span class="tag">Sencilla</span>
+                    <span class="tag">Artesanal</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Arepa+con+Huevo">
+                <div class="item-header">
+                    <h3>AREPA CON HUEVO</h3>
+                    <span class="price">$6.000</span>
+                </div>
+                <p class="ingredients">Arepa artesanal, huevo frito, queso costeño, mantequilla.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Huevo</span>
+                    <span class="tag">Tradicional</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Arepa+Rellena">
+                <div class="item-header">
+                    <h3>AREPA RELLENA</h3>
+                    <span class="price">$8.000</span>
+                </div>
+                <p class="ingredients">Arepa artesanal rellena de queso, carne desmechada o pollo, salsas.</p>
+                <div class="item-tags">
+                    <span class="tag">Rellena</span>
+                    <span class="tag">A Elegir</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Arepa+Premium">
+                <div class="item-header">
+                    <h3>AREPA PREMIUM</h3>
+                    <span class="price">$10.000</span>
+                </div>
+                <p class="ingredients">Arepa artesanal, mezcla de quesos, carne y pollo, huevo frito, tocineta, salsas especiales.</p>
+                <div class="item-tags">
+                    <span class="tag">Premium</span>
+                    <span class="tag">Mixta</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- COSTILLAS BBQ -->
+        <section id="costillas" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-drumstick-bite"></i> COSTILLAS BBQ</h2>
+                <p class="category-subtitle">Costillas ahumadas con nuestra salsa BBQ especial</p>
+            </div>
+            
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Media+Costilla">
+                <div class="item-header">
+                    <h3>MEDIA COSTILLA BBQ</h3>
+                    <span class="price">$18.000</span>
+                </div>
+                <p class="ingredients">Media costilla de cerdo ahumada, salsa BBQ especial, papas, ensalada.</p>
+                <div class="item-tags">
+                    <span class="tag">Ahumada</span>
+                    <span class="tag">Con Guarnición</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium destacado" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Costilla+Entera">
+                <div class="item-badge premium-badge">Especial</div>
+                <div class="item-header">
+                    <h3>COSTILLA ENTERA BBQ</h3>
+                    <span class="price">$30.000</span>
+                </div>
+                <p class="ingredients">Costilla de cerdo entera ahumada, salsa BBQ especial, papas artesanales, ensalada gourmet, pan de ajo.</p>
+                <div class="item-tags">
+                    <span class="tag">Entera</span>
+                    <span class="tag">Para Compartir</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEBIDAS -->
+        <section id="bebidas" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-glass-water"></i> BEBIDAS</h2>
+                <p class="category-subtitle">Refrescantes bebidas para acompañar tu comida</p>
+            </div>
+            
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Gaseosas">
+                <div class="item-header">
+                    <h3>GASEOSAS</h3>
+                    <span class="price">$3.000</span>
+                </div>
+                <p class="ingredients">Coca Cola, Pepsi, Sprite, Fanta. Presentación 350ml.</p>
+                <div class="item-tags">
+                    <span class="tag">350ml</span>
+                    <span class="tag">Varias Marcas</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Jugos+Naturales">
+                <div class="item-header">
+                    <h3>JUGOS NATURALES</h3>
+                    <span class="price">$4.000</span>
+                </div>
+                <p class="ingredients">Naranja, limón, mora, lulo, maracuyá. Naturales y frescos.</p>
+                <div class="item-tags">
+                    <span class="tag">Naturales</span>
+                    <span class="tag">Frescos</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Malteadas">
+                <div class="item-header">
+                    <h3>MALTEADAS</h3>
+                    <span class="price">$6.000</span>
+                </div>
+                <p class="ingredients">Fresa, vainilla, chocolate, oreo. Cremosas y deliciosas.</p>
+                <div class="item-tags">
+                    <span class="tag">Cremosas</span>
+                    <span class="tag">Varios Sabores</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Agua">
+                <div class="item-header">
+                    <h3>AGUA</h3>
+                    <span class="price">$2.000</span>
+                </div>
+                <p class="ingredients">Agua natural embotellada 500ml.</p>
+                <div class="item-tags">
+                    <span class="tag">500ml</span>
+                    <span class="tag">Natural</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/f8f9fa/c8994e?text=Cerveza">
+                <div class="item-header">
+                    <h3>CERVEZA</h3>
+                    <span class="price">$4.500</span>
+                </div>
+                <p class="ingredients">Águila, Club Colombia, Poker. Presentación 330ml.</p>
+                <div class="item-tags">
+                    <span class="tag">330ml</span>
+                    <span class="tag">Nacional</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para imágenes -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
